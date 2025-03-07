@@ -84,13 +84,13 @@ env:
   #DISCOURSE_MAXMIND_LICENSE_KEY: 1234567890123456
 
 ## The Docker container is stateless; all data is stored in /shared
-#volumes:
-#  - volume:
-#      host: /var/discourse/shared/standalone
-#      guest: /shared
-#  - volume:
-#      host: /var/discourse/shared/standalone/log/var-log
-#      guest: /var/log
+volumes:
+  - volume:
+      host: /var/discourse/shared/standalone
+      guest: /shared
+  - volume:
+      host: /var/discourse/shared/standalone/log/var-log
+      guest: /var/log
 
 ## Plugins go here
 ## see https://meta.discourse.org/t/19157 for details
